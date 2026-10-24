@@ -10,7 +10,9 @@ const UserProfileContainer = () => {
     try {
       setLoading(true);
       setErrorstatus(null);
-      const response = await fetch('https://jsonplaceholder.typicode.com/use1');
+      const response = await fetch(
+        'https://jsonplaceholder.typicode.com/users/1',
+      );
 
       if (!response.ok) {
         throw new Error(`Server returned status: ${response.status}`);
